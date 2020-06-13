@@ -145,8 +145,8 @@ body {
   padding-top: 9px;
 }
 
-.footer-top .contacts.list {
-  /* display: flex; */
+.footer-top .list {
+  margin-bottom: 28px;
 }
 
 .link:hover,
