@@ -147,6 +147,7 @@ body {
 
 .footer-top .list {
   margin-bottom: 28px;
+  padding-top: 8px;
 }
 
 .link:hover,
@@ -315,7 +316,6 @@ body {
 
 .contacts {
   line-height: 1.71;
-  padding-top: 8px;
 }
 
 .name-works {
