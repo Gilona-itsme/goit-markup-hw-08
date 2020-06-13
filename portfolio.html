@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <!-- Шапка сайта -->
+    <header class="page-header">
+      <div class="container main-nav">
+        <h1 class="logo" lang="en">
+          <span class="logo-accent">Web</span> Studio
+        </h1>
+
+        <ul class="site-nav list">
+          <li class="items">
+            <a href="index.html" class="link">Студия</a>
+          </li>
+          <li class="items">
+            <a href="portfolio.html" class="link current">Портфолио</a>
+          </li>
+          <li class="items"><a href="#" class="link">Контакты</a></li>
+        </ul>
+
+        <ul class="site-nav contacts list">
+          <li class="nav-items">
+            <a href="mailto:info@devstudio.com" class="link"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="nav-items">
+            <a href="tel:+380961111111" class="link">+380961111111</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- Перечень работ -->
+      <section class="container flex section">
+        <div class="filter-main">
+          <h2 class="is-hidden">Фильтр работ</h2>
+          <ul class="filter-button list">
+            <li class="filter-items">
+              <button type="button" class="button filter">Все</button>
+            </li>
+            <li class="filter-items">
+              <button type="button" class="button filter">Веб-сайты</button>
+            </li>
+            <li class="filter-items">
+              <button type="button" class="button filter">Приложения</button>
+            </li>
+            <li class="filter-items">
+              <button type="button" class="button filter">Дизайн</button>
+            </li>
+            <li class="filter-items">
+              <button type="button" class="button filter">Маркетинг</button>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="flex-cards list">
+          <li class="card-element">
+            <a href="#">
+              <img src="./images/img1.jpg" alt="laptop screen" />
+              <div class="card-content">
+                <h3 class="name-works">Технокряк</h3>
+                <p class="list-works">Веб-сайт</p>
+              </div>
+              <p class="description is-hidden">
+                Технокряк это современная площадка распространения коронавируса.
+                Компании используют эту платформу для цифрового шпионажа и атак
+                на защищённые сервера конкурентов.
+              </p>
+            </a>
+          </li>
+          <li class="card-element">
+            <a href="#">
+              <img src="./images/img2.jpg" alt="two basketball players" />
+              <div class="card-content">
+                <h3 class="name-works">
+                  Постер <span lang="en">New Orlean vs Golden Star</span>
+                </h3>
+                <p class="list-works">Дизайн</p>
+              </div>
+              <p class="description is-hidden">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Blanditiis quae explicabo nobis! Eius, alias qui. Molestias odit
+                repellat facere in?
+              </p>
+            </a>
+          </li>
+          <li class="card-element">
+            <a href="#">
+              <img src="./images/img3.jpg" alt="seafood restaurant logo" />
+              <div class="card-content">
+                <h3 class="name-works">
+                  Ресторан <span lang="en">Seafood</span>
+                </h3>
+                <p class="list-works">Приложение</p>
+              </div>
+              <p class="description is-hidden">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Blanditiis quae explicabo nobis! Eius, alias qui. Molestias odit
+                repellat facere in?
+              </p>
+            </a>
+          </li>
+          <li class="card-element">
+            <a href="#">
+              <img src="./images/img4.jpg" alt="headphones" />
+              <div class="card-content">
+                <h3 class="name-works">Проект <span lang="en">Prime</span></h3>
+                <p class="list-works">Маркетинг</p>
+              </div>
+              <p class="description is-hidden">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Blanditiis quae explicabo nobis! Eius, alias qui. Molestias odit
+                repellat facere in?
+              </p>
+            </a>
+          </li>
+          <li class="card-element">
+            <a href="#">
+              <img src="./images/img5.jpg" alt="two boxes" />
+              <div class="card-content">
+                <h3 class="name-works">Проект <span lang="en">Boxes</span></h3>
+                <p class="list-works">Приложение</p>
+              </div>
+              <p class="description is-hidden">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Blanditiis quae explicabo nobis! Eius, alias qui. Molestias odit
+                repellat facere in?
+              </p>
+            </a>
+          </li>
+          <li class="card-element">
+            <a href="#">
+              <img src="./images/computer.jpg" alt="computer screen" />
+              <div class="card-content">
+                <h3 class="name-works" lang="en">Inspiration has no Borders</h3>
+                <p class="list-works">Веб-сайт</p>
+              </div>
+              <p class="description is-hidden">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Blanditiis quae explicabo nobis! Eius, alias qui. Molestias odit
+                repellat facere in?
+              </p>
+            </a>
+          </li>
+          <li class="card-element">
+            <a href="#">
+              <img src="./images/img7.jpg" alt="pages magazine" />
+              <div class="card-content">
+                <h3 class="name-works">
+                  Издание <span lang="en">Limited Edition</span>
+                </h3>
+                <p class="list-works">Дизайн</p>
+              </div>
+              <p class="description is-hidden">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Blanditiis quae explicabo nobis! Eius, alias qui. Molestias odit
+                repellat facere in?
+              </p>
+            </a>
+          </li>
+          <li class="card-element">
+            <a href="#">
+              <img src="./images/img8.jpg" alt="label" />
+              <div class="card-content">
+                <h3 class="name-works">Проект <span lang="en">LAB</span></h3>
+                <p class="list-works">Маркетинг</p>
+              </div>
+              <p class="description is-hidden">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Blanditiis quae explicabo nobis! Eius, alias qui. Molestias odit
+                repellat facere in?
+              </p>
+            </a>
+          </li>
+          <li class="card-element">
+            <a href="#">
+              <img src="./images/laptop.jpg" alt="laptop" />
+              <div class="card-content">
+                <h3 class="name-works" lang="en">Growing Business</h3>
+                <p class="list-works">Приложение</p>
+              </div>
+              <p class="description is-hidden">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Blanditiis quae explicabo nobis! Eius, alias qui. Molestias odit
+                repellat facere in?
+              </p>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Контакты -->
+    <footer class="page-footer">
+      <div class="container footer">
+        <div class="footer-top">
+          <h1 class="logo" lang="en">
+            <span class="logo-accent">Web</span> Studio
+          </h1>
+          <address class="contacts">
+            г. Киев, пр-т Леси Украинки, 26
+          </address>
+          <ul class="contacts list">
+            <li>
+              <a href="mailto:info@devstudio.com" class="link"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a href="tel:+380961111111" class="link">+380961111111</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-link">
+          <p class="subscription">Присоединяйтесь</p>
+          <ul class="socials list">
+            <li>
+              <a href="#" aria-label="Instagram" class="link">Instagram</a>
+            </li>
+            <li><a href="#" aria-label="Twitter" class="link">Twitter</a></li>
+            <li>
+              <a href="#" aria-label="Facebook" class="link">Facebook</a>
+            </li>
+            <li>
+              <a href="#" aria-label="LinkedIn" class="link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-subscription">
+          <b class="subscription">Подпишитесь на рассылку</b>
+        </div>
+      </div>
+      <p class="container copyright" lang="en">
+        2020 | Developed by GoIT Students
+      </p>
+    </footer>
+  </body>
+</html>
