@@ -141,22 +141,8 @@ body {
   align-items: center;
 }
 
-.nav-items:nth-child(1)::before {
-  width: 16px;
-  height: 11.2px;
+.nav-icon {
   margin-right: 10px;
-  content: "";
-  background-image: url(../images/envelope.svg);
-  background-repeat: no-repeat;
-}
-
-.nav-items:nth-child(2)::before {
-  width: 10px;
-  height: 15px;
-  margin-right: 10px;
-  content: "";
-  background-image: url(../images/Vector.svg);
-  background-repeat: no-repeat;
 }
 
 .site-nav.contacts {
@@ -167,9 +153,10 @@ body {
   color: var(--text-color);
 }
 
-.link:hover,
-.link:focus {
+.nav-items .link:hover,
+.nav-items .link:focus {
   color: var(--accent-color);
+  --color5: var(--accent-color);
 }
 
 .site-nav .link.current {
@@ -187,9 +174,6 @@ body {
 
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-
-.hero {
 }
 
 .overlay {
@@ -220,8 +204,6 @@ body {
   background-color: var(--accent-color);
   font-size: 16px;
   line-height: 1.87;
-  /* align-items: center; */
-  /* text-align: center; */
   letter-spacing: 0.06em;
 }
 
@@ -257,17 +239,26 @@ body {
 .cards {
   display: flex;
 }
-.advantages-icon::before {
-  display: block;
-  content: "";
+
+.advantages-box {
   width: 270px;
   height: 120px;
-  background-image: url(../images/antenna.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--background-section);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #f5f4fa;
+  border-radius: 4px;
 }
-.flex.items + .flex.items {
+
+.advantages-icon {
+  width: 70px;
+  height: 70px;
+  background: var(--background-section);
+  border-radius: 4px;
+}
+
+.flex + .flex {
   margin-left: 30px;
 }
 
@@ -326,18 +317,24 @@ body {
   margin-bottom: 0;
 }
 
-.flex-link {
-  display: inline-block;
-  text-align: center;
-  border-radius: 50% 50%;
-  width: 44px;
-  height: 44px;
-  background-color: var(--main-background);
-  background-image: url(../images/instagram.svg);
+.socials {
+  display: flex;
+  justify-content: space-around;
 }
 
-.flex-link:hover {
+.item.link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials-link:hover,
+.socials-link:focus {
   background-color: var(--accent-color);
+  --color2: var(--main-background);
+  border-radius: 50%;
 }
 
 .advantages-pages.title {
@@ -362,21 +359,23 @@ body {
   margin-bottom: 0;
 }
 
-.name-works {
-  margin-top: 0;
-  margin-bottom: 0;
-
-  font-size: 18px;
-  line-height: 2;
+.client-list {
+  width: 170px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--main-background);
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 
-.list-works {
-  margin-top: 0;
-  margin-bottom: 0;
-
-  color: var(--text-color);
-  font-size: 16px;
-  line-height: 1.87;
+.client-list:hover,
+.client-list:focus {
+  --color2: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 /* Footer */
@@ -400,6 +399,10 @@ body {
   padding-top: 9px;
 }
 
+address {
+  margin-top: 20px;
+}
+
 /* a .link {
   color: rgba(255, 255, 255, 0.6);
 } */
@@ -417,6 +420,25 @@ body {
 
 .footer-link {
   margin-left: 64px;
+}
+
+.footer-link .socials {
+  padding-left: 0;
+}
+
+.footer-link .socials-link {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.footer-link .socials-link:first-child {
+  margin-left: 0;
+}
+
+.footer-link .socials-link:hover,
+.footer-link .socials-link:focus {
+  background-color: var(--accent-color);
 }
 
 /* .subscription-mail {
@@ -449,9 +471,6 @@ body {
 }
 
 .subscription-box > .button {
-  /* margin-top: 15px;
-  margin-bottom: 15px; */
-
   font-weight: bold;
   padding-left: 29px;
   padding-right: 29px;
@@ -463,26 +482,8 @@ body {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.subscription-box .button::after {
-  display: inline-block;
+.subscription-icon {
   margin-left: 10px;
-  content: "";
-  width: 24px;
-  height: 24px;
-  align-self: flex-end;
-  background-image: url(../images/iconsend.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-.copyright {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 18px;
-  padding-bottom: 21px;
-  color: rgba(255, 255, 255, 0.4);
-  line-height: 2;
-  font-size: 12px;
-  text-align: center;
 }
 
 /* portfolio */
@@ -525,6 +526,23 @@ body {
 .card-element:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.name-works {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 18px;
+  line-height: 2;
+}
+
+.list-works {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.87;
 }
 
 .button:hover,
