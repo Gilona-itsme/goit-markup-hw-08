@@ -37,20 +37,25 @@
 
         <ul class="site-nav contacts list">
           <li class="nav-items">
-            <a href="mailto:info@devstudio.com" class="link"
+            <a href="mailto:info@devstudio.com" class="link">
+              <svg class="nav-icon" width="16" height="11">
+                <use href="./images/sprite.svg#envelope"></use></svg
               >info@devstudio.com</a
             >
           </li>
           <li class="nav-items">
-            <a href="tel:+380961111111" class="link">+380961111111</a>
+            <a href="tel:+380961111111" class="link">
+              <svg class="nav-icon" width="10" height="15">
+                <use href="./images/sprite.svg#Vector"></use></svg
+              >+380961111111</a
+            >
           </li>
         </ul>
       </div>
     </header>
-
     <main>
       <!-- Перечень работ -->
-      <section class="container flex section">
+      <section class="container section">
         <div class="filter-main">
           <h1 class="visually-hidden">Фильтр работ</h1>
           <ul class="filter-button list">
@@ -247,27 +252,51 @@
         </div>
         <div class="footer-link">
           <p class="subscription">Присоединяйтесь</p>
-          <ul class="socials list">
-            <li>
-              <a href="#" aria-label="Instagram" class="link">Instagram</a>
+          <ul class="socials">
+            <li class="socials-link">
+              <a href="#" aria-label="Instagram" class="item link">
+                <svg class="social-icon" width="20" height="20">
+                  <use href="./images/sprite.svg#instagram"></use>
+                </svg>
+              </a>
             </li>
-            <li><a href="#" aria-label="Twitter" class="link">Twitter</a></li>
-            <li>
-              <a href="#" aria-label="Facebook" class="link">Facebook</a>
+            <li class="socials-link">
+              <a href="#" aria-label="Twitter" class="item link">
+                <svg class="social-icon" width="20" height="20">
+                  <use href="./images/sprite.svg#twitter"></use>
+                </svg>
+              </a>
             </li>
-            <li>
-              <a href="#" aria-label="LinkedIn" class="link">LinkedIn</a>
+            <li class="socials-link">
+              <a href="#" aria-label="Facebook" class="item link">
+                <svg class="social-icon" width="20" height="20">
+                  <use href="./images/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-link">
+              <a href="#" aria-label="LinkedIn" class="item link">
+                <svg class="social-icon" width="20" height="20">
+                  <use href="./images/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
 
         <div class="footer-subscription">
           <b class="subscription">Подпишитесь на рассылку</b>
+          <div class="subscription-box">
+            <a class="subscription-mail" href="mailto:"></a>
+            <a href="#" class="link button"
+              >Подписаться
+              <svg class="subscription-icon" width="24" height="24">
+                <use href="./images/sprite.svg#iconsend"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
-      <p class="container copyright" lang="en">
-        2020 | Developed by GoIT Students
-      </p>
     </footer>
   </body>
 </html>
