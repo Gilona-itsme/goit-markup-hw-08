@@ -1,10 +1,4 @@
-/*
-background: #FFFFFF;
-background: rgba(47, 48, 58, 0.8);
-background: #E5E5E5;
-футер 
-background: #F5F4FA;
-    */
+/
 /* Утилиты  */
 img {
   display: block;
@@ -152,14 +146,26 @@ body {
   color: var(--text-color);
 }
 
-.nav-items .link:hover,
-.nav-items .link:focus {
+.link:hover,
+.link:focus {
   color: var(--accent-color);
   --color5: var(--accent-color);
 }
 
 .site-nav .link.current {
   color: var(--accent-color);
+  position: relative;
+}
+
+.site-nav .link.current::after {
+  content: "";
+  position: absolute;
+  background-color: var(--accent-color);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
 }
 
 /* Hero */
@@ -488,6 +494,7 @@ address {
   padding-top: 10px;
   padding-bottom: 10px;
 
+  color: var(--title-white-color);
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
