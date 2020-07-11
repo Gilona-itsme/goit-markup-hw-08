@@ -64,7 +64,9 @@
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <a href="#" class="link button">Заказать услугу</a>
+          <button data-modal-open type="submit" class="button">
+            Заказать услугу
+          </button>
         </div>
       </section>
 
@@ -373,6 +375,85 @@
           </ul>
         </div>
       </section>
+
+      <!-- Модальное окно -->
+      <div class="backdrop is-hidden" data-modal>
+        <form class="modal">
+          <button data-modal-close class="modal-close" aria-label="Закрыть">
+            <svg class="modal-icon" width="18" height="18">
+              <use href="./images/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <p class="text-form">Оставьте свои данные, мы вам перезвоним</p>
+
+          <label class="form-field">
+            <input class="form-input" type="text" name="name" placeholder=" " />
+            <span class="form-label">Имя</span>
+            <svg class="form-icon">
+              <use href="./images/sprite.svg#name" width="18" height="18"></use>
+            </svg>
+          </label>
+
+          <label class="form-field">
+            <input
+              class="form-input"
+              type="tel"
+              name="telephone"
+              placeholder=" "
+            />
+
+            <span class="form-label">Телефон</span>
+            <svg class="form-icon">
+              <use href="./images/sprite.svg#tel" width="18" height="18"></use>
+            </svg>
+          </label>
+
+          <label class="form-field">
+            <input
+              class="form-input"
+              type="email"
+              name="email"
+              placeholder=" "
+            />
+            <span class="form-label">Почта</span>
+            <svg class="form-icon">
+              <use
+                href="./images/sprite.svg#email"
+                width="18"
+                height="18"
+              ></use>
+            </svg>
+          </label>
+
+          <label class="form-field">
+            <textarea
+              class="comment"
+              name="comment"
+              rows="10"
+              placeholder=" "
+            ></textarea>
+            <span class="comment-label">Комментарий</span>
+          </label>
+
+          <label class="checkbox-label">
+            <input
+              class="checkbox visually-hidden"
+              type="checkbox"
+              name="policy"
+              id="policy"
+            />
+            <span class="check-icon"></span>
+            Соглашаюсь с рассылкой и принимаю
+            <a href="#">Условия договора</a>
+          </label>
+
+          <div class="form-button">
+            <button data-modal-close type="submit" class="button">
+              Отправить
+            </button>
+          </div>
+        </form>
+      </div>
     </main>
 
     <!-- Контакты -->
@@ -434,18 +515,30 @@
         </div>
 
         <div class="footer-subscription">
-          <b class="subscription">Подпишитесь на рассылку</b>
-          <div class="subscription-box">
-            <a class="subscription-mail" href="mailto:" lang="en">E-mail</a>
-            <a href="#" class="secondary-button"
-              >Подписаться
-              <svg class="subscription-icon" width="24" height="24">
-                <use href="./images/sprite.svg#iconsend"></use>
-              </svg>
-            </a>
-          </div>
+          <form class="subscription-box">
+            <b class="subscription-text">Подпишитесь на рассылку</b>
+            <div class="subscription-form">
+              <label class="subscription-mail">
+                <input
+                  class="subscription-input"
+                  type="email"
+                  name="mail"
+                  placeholder="E-mail"
+                />
+                <span class="subscription-label"></span>
+              </label>
+              <button type="submit" class="secondary button">
+                Подписаться
+                <svg class="subscription-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#iconsend"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
