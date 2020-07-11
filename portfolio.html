@@ -60,21 +60,21 @@
       <section class="container section">
         <div class="filter-main">
           <h1 class="visually-hidden">Фильтр работ</h1>
-          <ul class="filter-button list">
+          <ul class="filter list">
             <li class="filter-items">
-              <button type="button" class="button filter">Все</button>
+              <button type="button" class="button-filter">Все</button>
             </li>
             <li class="filter-items">
-              <button type="button" class="button filter">Веб-сайты</button>
+              <button type="button" class="button-filter">Веб-сайты</button>
             </li>
             <li class="filter-items">
-              <button type="button" class="button filter">Приложения</button>
+              <button type="button" class="button-filter">Приложения</button>
             </li>
             <li class="filter-items">
-              <button type="button" class="button filter">Дизайн</button>
+              <button type="button" class="button-filter">Дизайн</button>
             </li>
             <li class="filter-items">
-              <button type="button" class="button filter">Маркетинг</button>
+              <button type="button" class="button-filter">Маркетинг</button>
             </li>
           </ul>
         </div>
@@ -270,6 +270,7 @@
     </main>
 
     <!-- Контакты -->
+    <!-- Контакты -->
     <footer class="page-footer">
       <div class="container footer">
         <div class="footer-top">
@@ -328,16 +329,26 @@
         </div>
 
         <div class="footer-subscription">
-          <b class="subscription">Подпишитесь на рассылку</b>
-          <div class="subscription-box">
-            <a class="subscription-mail" href="mailto:" lang="en">E-mail</a>
-            <a href="#" class="secondary-button"
-              >Подписаться
-              <svg class="subscription-icon" width="24" height="24">
-                <use href="./images/sprite.svg#iconsend"></use>
-              </svg>
-            </a>
-          </div>
+          <form class="subscription-box">
+            <b class="subscription-text">Подпишитесь на рассылку</b>
+            <div class="subscription-form">
+              <label>
+                <input
+                  class="subscription-mail"
+                  type="email"
+                  name="mail"
+                  placeholder=" "
+                />
+                <span class="subscription-label">E-mail</span>
+              </label>
+              <button type="submit" class="secondary button">
+                Подписаться
+                <svg class="subscription-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#iconsend"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </footer>
