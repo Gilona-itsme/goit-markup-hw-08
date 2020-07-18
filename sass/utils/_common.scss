@@ -1,0 +1,53 @@
+/* Утилиты  */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-image: 0;
+}
+/* Отменяет маркер у всех списков*/
+
+ul {
+  list-style-type: none;
+}
+
+/* Отменяет у ссылок подчеркивание и дефолтный цвет */
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  transition: color $duraction $timing;
+}
+
+/* отменяет дефолнтый наклон  у address */
+address {
+  font-style: inherit;
+  margin-top: 20px;
+}
+
+/* отменяет дефолтный button */
+button {
+  border: none;
+  outline: none;
+  background-color: none;
+}
+
+textarea {
+  resize: none;
+}
+
+p,
+ul {
+  margin: 0;
+}
+
+body {
+  color: $main-title-color;
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  background-color: $main-background;
+}
