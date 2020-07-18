@@ -1,0 +1,32 @@
+.clients-list {
+  @extend %list;
+}
+
+.client-list {
+  width: 170px;
+  height: 90px;
+  @extend %flex;
+  cursor: pointer;
+  background-color: $main-background;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  transition: border-color $duraction $timing;
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+
+.client-icon {
+  fill: $socials-icon;
+
+  transition: fill $duraction $timing;
+
+  .client-list:hover &,
+  .client-list:focus & {
+    fill: $accent-color;
+  }
+}

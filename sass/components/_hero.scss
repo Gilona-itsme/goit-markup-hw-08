@@ -1,0 +1,38 @@
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  background-image: linear-gradient(
+      $secondary-background,
+      $secondary-background
+    ),
+    url("../images/Header.jpg");
+  background-color: $secondary-background;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+
+.hero {
+}
+
+.hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: $title-accent-color;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.main-button {
+  @extend %button;
+}

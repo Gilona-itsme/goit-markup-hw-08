@@ -1,0 +1,8 @@
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
+.container {
+  @extend %container;
+  @extend %flex;
+}

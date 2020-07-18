@@ -1,0 +1,211 @@
+.backdrop {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity $duraction $timing;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  height: 581px;
+  padding: 40px 40px;
+  overflow-y: auto;
+  max-height: 100%;
+  background-color: $main-background;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform $duraction $timing;
+
+  a {
+    text-decoration: underline;
+    color: $accent-color;
+    cursor: pointer;
+    padding-left: 4px;
+  }
+}
+
+.text-form {
+  @extend %text;
+  margin-bottom: 30px;
+  display: flex;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.form-field {
+  position: relative;
+  display: flex;
+  width: 100%;
+  color: $text-color;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  &:nth-child(-n + 5) {
+    margin-bottom: 28px;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 0;
+  top: 0;
+  padding: 5px 5px;
+  background-color: $main-background;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 50%;
+  transform: translateX(-8px) translateY(8px);
+  transition: border-color $duraction $timing;
+  transition: color $duraction $timing;
+}
+
+.form-input {
+  margin: 0;
+  padding: 12px 18px;
+  padding-left: 42px;
+  font: inherit;
+  width: 100%;
+  transition: transform $duraction $timing, border-color $duraction $timing;
+
+  &:focus {
+    border: 1px solid #2196f3;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.form-label {
+  position: absolute;
+  left: 42px;
+  top: 30%;
+  transition: transform $duraction $timing, border-color $duraction $timing;
+
+  .form-input:focus + &,
+  .form-input:not(:placeholder-shown) + & {
+    transform: translateY(-30px) translateX(-26px);
+    color: $accent-color;
+  }
+}
+
+input,
+textarea {
+  label:focus-within &,
+  label:focus-within & {
+    border-color: $accent-color;
+    outline: none;
+  }
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  width: 18px;
+  height: 18px;
+
+  transform: translateY(-50%);
+
+  .form-input:focus ~ & {
+    fill: $accent-color;
+  }
+}
+
+.modal-icon {
+  .modal-close:hover &,
+  .modal-close:focus & {
+    fill: $accent-color;
+    cursor: pointer;
+  }
+}
+
+.comment {
+  resize: none;
+  width: 100%;
+  padding: 12px 16px;
+
+  &:focus {
+    border: 1px solid #2196f3;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.comment-label {
+  position: absolute;
+  padding: 12px 16px;
+  transition: transform $duraction $timing;
+
+  .comment:focus + &,
+  .comment:not(:placeholder-shown) + & {
+    transform: translateY(-30px);
+    color: $accent-color;
+    cursor: pointer;
+  }
+}
+
+.form-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.modal-button {
+  @extend %button;
+  background-color: $accent-color;
+  max-width: 200px;
+  max-height: 50px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $button-accent-bgcolor;
+  }
+}
+
+.checkbox-label {
+  display: flex;
+  margin-top: 20px;
+  line-height: 1.71;
+  justify-content: center;
+  color: $text-color;
+}
+
+.check-icon {
+  display: inline-block;
+  margin-right: 9px;
+  width: 15px;
+  height: 16px;
+  border-radius: 2px;
+  border: 2px solid #212121;
+
+  .checkbox:checked + & {
+    border-color: transparent;
+    background-color: $accent-color;
+    background-image: url("/images/iconcheck.svg");
+    background-size: contain;
+    background-origin: border-box;
+  }
+}

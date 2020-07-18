@@ -1,0 +1,62 @@
+.footer-subscription {
+  margin-left: auto;
+}
+
+.subscription-box {
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.subscription-form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.subscription-text {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 1.14;
+}
+
+.secondary-button {
+  @extend %button;
+  display: flex;
+  padding-left: 29px;
+  padding-right: 29px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: box-shadow $duraction $timing;
+  overflow: hidden;
+
+  &:hover,
+  &:focus {
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.24);
+  }
+}
+
+.subscription-icon {
+  margin-left: 10px;
+  transition: transform $duraction $timing;
+}
+
+.subscription-mail {
+  position: relative;
+}
+
+.subscription-input {
+  min-width: 358px;
+  margin-right: 12px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: $color-input-form;
+  background-color: $footer-background;
+
+  transition: transform $duraction $timing;
+}

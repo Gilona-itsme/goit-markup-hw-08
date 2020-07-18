@@ -1,0 +1,35 @@
+.visually-hidden {
+  @extend %visually-hidden;
+}
+
+.advantages {
+  @extend %list;
+}
+
+.advantages-box {
+  width: 270px;
+  height: 120px;
+  @extend %flex;
+  background-color: $background-section;
+  border-radius: 4px;
+  @extend %text;
+}
+
+.advantages-icon {
+  width: 70px;
+  height: 70px;
+  background: $background-section;
+  border-radius: 4px;
+}
+
+.advantages-title {
+  @extend %title;
+  line-height: 1.14;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.advantages-text {
+  color: $text-color;
+  line-height: 1.71;
+}

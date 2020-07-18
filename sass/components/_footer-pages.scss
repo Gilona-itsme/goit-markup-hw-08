@@ -1,0 +1,50 @@
+.page-footer {
+  background-color: $footer-background;
+  color: $title-accent-color;
+  font-size: 14px;
+  min-width: 1200px;
+}
+
+.footer {
+  @extend %container;
+  display: flex;
+  align-items: baseline;
+  padding-top: 45px;
+}
+
+.contact-address {
+  line-height: 1.71;
+}
+
+.footer-list {
+  @extend %list;
+  margin-bottom: 28px;
+  padding-top: 8px;
+  flex-direction: column;
+}
+
+.address-link {
+  display: block;
+  padding-top: 9px;
+  color: $text-color;
+  transition: color $duraction $timing;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.socials-footer {
+  margin-left: 0;
+}
+
+.footer-links {
+  margin-left: 64px;
+
+  .socials {
+    padding-left: 0;
+    padding-top: 20px;
+    padding-right: 0;
+  }
+}
