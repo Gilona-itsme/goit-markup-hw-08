@@ -1,7 +1,7 @@
 /* Утилиты  */
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-image: 0;
 }
@@ -50,4 +50,8 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
   background-color: $main-background;
+
+  &.modal-open {
+    overflow: hidden;
+  }
 }

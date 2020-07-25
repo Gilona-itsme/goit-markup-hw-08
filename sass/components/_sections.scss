@@ -4,36 +4,43 @@
 .team-pages,
 .clients-pages,
 .portfolio-pages {
-  @extend %section;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .advantages-pages {
-  padding-bottom: 0;
-}
-
-.hero,
-.advantages,
-.works,
-.team,
-.clients,
-.footer,
-.portfolio-pages {
-  @extend %container;
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 0;
+  }
 }
 
 .flex {
   position: relative;
 
-  & + & {
-    margin-left: 30px;
-  }
+  // & + & {
+  //   margin-left: 30px;
+  // }
 }
 
 .section-title {
   margin-top: 0px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 28px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 36px;
+  }
   line-height: 1.17;
   text-align: center;
 }

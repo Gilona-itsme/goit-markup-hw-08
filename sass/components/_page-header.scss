@@ -1,8 +1,14 @@
 .page-header {
+  position: relative;
   border-bottom: 1px solid #ececec;
 }
 
-.container {
-  @extend %container;
-  @extend %flex;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 1199px) {
+    justify-content: space-between;
+  }
 }

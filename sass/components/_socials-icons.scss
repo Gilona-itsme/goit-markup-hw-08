@@ -1,7 +1,10 @@
 .socials {
   @extend %flex;
-  justify-content: space-around;
-  padding: 16px 32px 24px;
+
+  padding-top: 16px;
+  padding-bottom: 24px;
+  padding-left: 122px;
+  padding-right: 122px;
 }
 
 .social-icon {
@@ -23,11 +26,40 @@
   &:focus-within {
     background-color: $accent-color;
   }
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
 .link {
-  @extend %link;
+  width: 44px;
+  height: 44px;
   @extend %flex;
+}
+
+.footer-links {
+  text-align: center;
+
+  .socials-footer {
+    @extend %flex;
+    padding-left: 0;
+    // margin-top: 20px;
+    // padding-right: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-left: 165px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 69px;
+  }
 }
 
 .footer-social-icon {
@@ -58,10 +90,15 @@
 
 .footer-link {
   margin-left: 64px;
-  @extend %link;
+  width: 44px;
+  height: 44px;
   @extend %flex;
 
   &:first-child {
     margin-left: 0;
   }
+}
+
+.socials-footer {
+  margin-left: 0;
 }

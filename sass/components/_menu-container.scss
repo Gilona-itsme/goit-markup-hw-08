@@ -1,0 +1,28 @@
+.menu-button {
+  display: flex;
+  border: none;
+  background-color: transparent;
+
+  & .icon-nav_close {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.is-open {
+  & .icon-nav_close {
+    display: block;
+  }
+
+  & .icon-nav_menu {
+    display: none;
+  }
+}

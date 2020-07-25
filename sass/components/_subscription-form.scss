@@ -1,27 +1,74 @@
 .footer-subscription {
-  margin-left: auto;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 60px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: auto;
+  }
 }
 
 .subscription-box {
+  padding-bottom: 60px;
   font-size: 16px;
   line-height: 1.25;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .subscription-form {
-  display: flex;
   margin-top: 20px;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
 }
 
 .subscription-text {
-  margin-top: 0;
-  margin-bottom: 20px;
   font-weight: bold;
   line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.subscription-mail {
+  position: relative;
+}
+
+.subscription-input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: $color-input-form;
+  background-color: $footer-background;
+
+  transition: transform $duraction $timing;
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 12px;
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+  }
 }
 
 .secondary-button {
   @extend %button;
-  display: flex;
+  display: inline-flex;
   padding-left: 29px;
   padding-right: 29px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
@@ -37,26 +84,5 @@
 
 .subscription-icon {
   margin-left: 10px;
-  transition: transform $duraction $timing;
-}
-
-.subscription-mail {
-  position: relative;
-}
-
-.subscription-input {
-  min-width: 358px;
-  margin-right: 12px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 16px;
-
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  color: $color-input-form;
-  background-color: $footer-background;
-
   transition: transform $duraction $timing;
 }

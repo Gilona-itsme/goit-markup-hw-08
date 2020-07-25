@@ -1,6 +1,12 @@
-.work {
-  @extend %list;
-  text-transform: uppercase;
+.works-pages {
+  .work {
+    @extend %list;
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .works-title {

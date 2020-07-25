@@ -15,48 +15,72 @@
   <body>
     <!-- Шапка сайта -->
     <header class="page-header">
-      <div class="container">
-        <a class="logo" href="/index.html"
-          ><img src="/index.html" alt="" /><span class="logo-accent" lang="en"
-            >Web</span
-          >
+      <div class="header container">
+        <a class="logo" href="./index.html"
+          ><span class="logo-accent" lang="en">Web</span>
           Studio
         </a>
-        <ul class="site-nav list">
-          <li class="nav-items">
-            <a href="index.html" class="nav-link current">Студия </a>
-          </li>
-          <li class="nav-items">
-            <a href="portfolio.html" class="nav-link">Портфолио</a>
-          </li>
-          <li class="nav-items"><a href="#" class="nav-link">Контакты</a></li>
-        </ul>
 
-        <ul class="site-nav contacts list">
-          <li class="contact-items">
-            <a href="mailto:info@devstudio.com" class="contact-link">
-              <svg class="nav-icon" width="16" height="11">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contact-items">
-            <a href="tel:+380961111111" class="contact-link">
-              <svg class="nav-icon" width="10" height="15">
-                <use href="./images/sprite.svg#Vector"></use>
-              </svg>
-              +380961111111
-            </a>
-          </li>
-        </ul>
+        <button
+          type="button"
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            width="24"
+            height="16"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="icon-nav_menu"
+              href="./images/sprite.svg#nav_menu"
+            ></use>
+            <use
+              class="icon-nav_close"
+              href="./images/sprite.svg#nav_close"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="menu-container" id="menu-container" data-menu>
+          <ul class="site-nav list">
+            <li class="nav-items">
+              <a href="index.html" class="nav-link current">Студия </a>
+            </li>
+            <li class="nav-items">
+              <a href="portfolio.html" class="nav-link">Портфолио</a>
+            </li>
+            <li class="nav-items"><a href="#" class="nav-link">Контакты</a></li>
+          </ul>
+
+          <ul class="site-nav contacts">
+            <li class="contact-items">
+              <a href="mailto:info@devstudio.com" class="contact-link">
+                <svg class="nav-icon" width="16" height="11">
+                  <use href="./images/sprite.svg#envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="contact-items">
+              <a href="tel:+380961111111" class="contact-link">
+                <svg class="nav-icon" width="10" height="15">
+                  <use href="./images/sprite.svg#Vector"></use>
+                </svg>
+                +380961111111
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
     <main>
       <!-- Заказ услуги -->
       <section class="hero-pages section overlay">
-        <div class="hero">
+        <div class="hero container">
           <h1 class="hero-title">
             Эффективные решения <br />
             для вашего бизнеса
@@ -69,10 +93,10 @@
 
       <!-- Наши приемущества -->
       <section class="advantages-pages">
-        <div class="advantages">
+        <div class="advantages container">
           <h2 class="section-title visually-hidden">Наши приемущества</h2>
-          <ul class="advantages list">
-            <li class="flex">
+          <ul class="advantages-list">
+            <li class="advantages-flex">
               <div class="advantages-box">
                 <svg class="advantages-icon">
                   <use href="./images/sprite.svg#antenna"></use>
@@ -84,7 +108,7 @@
                 формированию позиции.
               </p>
             </li>
-            <li class="flex">
+            <li class="advantages-flex">
               <div class="advantages-box">
                 <svg class="advantages-icon">
                   <use href="./images/sprite.svg#clock"></use>
@@ -96,7 +120,7 @@
                 кадров влечет за собой.
               </p>
             </li>
-            <li class="flex">
+            <li class="advantages-flex">
               <div class="advantages-box">
                 <svg class="advantages-icon">
                   <use href="./images/sprite.svg#diagram"></use>
@@ -108,7 +132,7 @@
                 степени обуславливает.
               </p>
             </li>
-            <li class="flex">
+            <li class="advantages-flex">
               <div class="advantages-box">
                 <svg class="advantages-icon">
                   <use href="./images/sprite.svg#astronaut"></use>
@@ -126,7 +150,7 @@
 
       <!-- Услуги -->
       <section class="works-pages">
-        <div class="works">
+        <div class="works container">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="work list">
             <li class="flex items">
@@ -168,7 +192,7 @@
 
       <!-- Состав команды -->
       <section class="team-pages">
-        <div class="team">
+        <div class="team container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-cards">
             <li class="card-list flex">
@@ -324,45 +348,45 @@
 
       <!-- Клиенты -->
       <section class="clients-pages">
-        <div class="clients">
+        <div class="clients container">
           <h2 class="section-title">Постоянные клиенты</h2>
           <ul class="clients-list">
-            <li class="flex">
+            <li class="client-items">
               <a href="#" class="client-list">
                 <svg class="client-icon" width="44" height="49">
                   <use href="./images/sprite.svg#logo1"></use>
                 </svg>
               </a>
             </li>
-            <li class="flex">
+            <li class="client-items">
               <a href="#" class="client-list"
                 ><svg class="client-icon" width="40" height="52">
                   <use href="./images/sprite.svg#logo2"></use>
                 </svg>
               </a>
             </li>
-            <li class="flex">
+            <li class="client-items">
               <a href="#" class="client-list">
                 <svg class="client-icon" width="41" height="43">
                   <use href="./images/sprite.svg#logo3"></use>
                 </svg>
               </a>
             </li>
-            <li class="flex">
+            <li class="client-items">
               <a href="#" class="client-list">
                 <svg class="client-icon" width="80" height="42">
                   <use href="./images/sprite.svg#logo4"></use>
                 </svg>
               </a>
             </li>
-            <li class="flex">
+            <li class="client-items">
               <a href="#" class="client-list">
                 <svg class="client-icon" width="59" height="47">
                   <use href="./images/sprite.svg#logo5"></use>
                 </svg>
               </a>
             </li>
-            <li class="flex">
+            <li class="client-items">
               <a href="#" class="client-list">
                 <svg class="client-icon" width="89" height="45">
                   <use href="./images/sprite.svg#logo6"></use>
@@ -456,59 +480,62 @@
     <!-- Контакты -->
     <footer class="page-footer">
       <div class="container footer">
-        <div class="footer-top">
-          <a class="logo" href="/index.html"
-            ><img src="/index.html" alt="" /><span class="logo-accent" lang="en"
-              >Web</span
+        <div class="footer-top-links">
+          <div class="footer-top">
+            <a class="logo" href="/index.html"
+              ><span class="logo-accent" lang="en">Web</span> Studio</a
             >
-            Studio</a
-          >
-          <address class="contact-address">
-            г. Киев, пр-т Леси Украинки, 26
-          </address>
-          <ul class="contacts footer-list">
-            <li>
-              <a href="mailto:info@devstudio.com" class="address-link"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li>
-              <a href="tel:+380961111111" class="address-link">+380961111111</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <p class="subscription">Присоединяйтесь</p>
-          <ul class="socials">
-            <li class="footer-socials-link">
-              <a href="#" aria-label="Instagram" class="item footer-link">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-socials-link">
-              <a href="#" aria-label="Twitter" class="item footer-link">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-socials-link">
-              <a href="#" aria-label="Facebook" class="item footer-link">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-socials-link">
-              <a href="#" aria-label="LinkedIn" class="item footer-link">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+
+            <address class="contact-address">
+              г. Киев, пр-т Леси Украинки, 26
+
+              <ul class="contacts footer-list">
+                <li>
+                  <a href="mailto:info@devstudio.com" class="address-link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li>
+                  <a href="tel:+380961111111" class="address-link"
+                    >+380961111111</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-links">
+            <p class="subscription-text">Присоединяйтесь</p>
+            <ul class="socials-footer">
+              <li class="footer-socials-link">
+                <a href="#" aria-label="Instagram" class="item footer-link">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-socials-link">
+                <a href="#" aria-label="Twitter" class="item footer-link">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-socials-link">
+                <a href="#" aria-label="Facebook" class="item footer-link">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-socials-link">
+                <a href="#" aria-label="LinkedIn" class="item footer-link">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div class="footer-subscription">
@@ -524,12 +551,14 @@
                 />
                 <span class="subscription-label"></span>
               </label>
-              <button type="submit" class="secondary-button">
-                Подписаться
-                <svg class="subscription-icon" width="24" height="24">
-                  <use href="./images/sprite.svg#iconsend"></use>
-                </svg>
-              </button>
+              <div>
+                <button type="submit" class="secondary-button">
+                  Подписаться
+                  <svg class="subscription-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#iconsend"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
           </form>
         </div>
@@ -537,5 +566,6 @@
     </footer>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

@@ -1,20 +1,66 @@
-.site-nav {
-  @extend %list;
-  max-height: 80px;
-  margin-left: 85px;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+.menu-container {
+  background-color: $main-background;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.17;
+  z-index: 1;
+  &.is-open {
+    display: block;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 4px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+  }
 }
 
-.contacts {
-  margin-left: auto;
+.site-nav {
+  padding-left: 0;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  &.list {
+    @media screen and (min-width: $tablet) {
+      display: inline-flex;
+      margin-left: 81px;
+    }
+  }
+
+  &.contacts {
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      margin-left: 85px;
+    }
+  }
 }
 
 .nav-link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  position: relative;
+
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 8px;
+
+  transition: color $duraction $timing;
+
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 28px;
+  }
 
   &:hover,
   &:focus {
@@ -39,18 +85,53 @@
 }
 
 .nav-items {
-  & + & {
-    margin-left: 50px;
+  padding-bottom: 40px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 1.14;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 32px;
+    padding-top: 32px;
+
+    & + & {
+      margin-left: 50px;
+    }
   }
 }
 
 .contact-items {
-  @extend %list;
-  justify-content: space-around;
-  align-items: center;
+  @media screen and (max-width: 767px) {
+    &:first-child {
+      padding-top: 20px;
+    }
 
-  & + & {
-    margin-left: 30px;
+    &:last-child {
+      padding-top: 16px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      padding-top: 10px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+
+    & + & {
+      margin-left: 30px;
+    }
+
+    &:last-child {
+      padding-top: 0;
+    }
   }
 }
 

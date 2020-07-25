@@ -1,6 +1,6 @@
 .backdrop {
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
@@ -8,29 +8,41 @@
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity $duraction $timing;
-}
 
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+
+    @media screen and (min-width: $mobile) {
+      & > .modal {
+        transform: translate(-50%, -50%) scale(0.4);
+      }
+    }
+  }
+  padding: 15px 94px;
+  overflow-y: scroll;
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 528px;
-  height: 581px;
   padding: 40px 40px;
-  overflow-y: auto;
-  max-height: 100%;
   background-color: $main-background;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 450px;
+  // max-height: 609px;
+  overflow-y: auto;
+  width: 100%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform $duraction $timing;
+  @media screen and (min-width: $desktop) {
+    max-width: 528px;
+    // max-height: 581px;
+  }
 
   a {
     text-decoration: underline;
@@ -54,6 +66,7 @@
   position: relative;
   display: flex;
   width: 100%;
+  margin-bottom: 20px;
   color: $text-color;
   line-height: 1.14;
   letter-spacing: 0.01em;
@@ -186,16 +199,22 @@ textarea {
 }
 
 .checkbox-label {
-  display: flex;
-  margin-top: 20px;
-  line-height: 1.71;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.17;
   justify-content: center;
+
   color: $text-color;
+
+  @media screen and (min-width: $desktop) {
+    line-height: 1.71;
+    font-size: 14px;
+  }
 }
 
 .check-icon {
   display: inline-block;
-  margin-right: 9px;
+  margin-right: 8px;
   width: 15px;
   height: 16px;
   border-radius: 2px;

@@ -2,30 +2,35 @@
   background-color: $footer-background;
   color: $title-accent-color;
   font-size: 14px;
-  min-width: 1200px;
 }
 
 .footer {
-  @extend %container;
-  display: flex;
+  display: block;
+  justify-content: center;
   align-items: baseline;
-  padding-top: 45px;
+  padding-top: 60px;
+
+  @media screen and (min-width: $tablet) {
+    min-height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .contact-address {
   line-height: 1.71;
 }
 
+.footer-top {
+  text-align: center;
+}
+
 .footer-list {
-  @extend %list;
-  margin-bottom: 28px;
-  padding-top: 8px;
-  flex-direction: column;
+  padding: 0;
 }
 
 .address-link {
-  display: block;
-  padding-top: 9px;
+  padding-top: 8px;
   color: $text-color;
   transition: color $duraction $timing;
 
@@ -35,16 +40,9 @@
   }
 }
 
-.socials-footer {
-  margin-left: 0;
-}
-
-.footer-links {
-  margin-left: 64px;
-
-  .socials {
-    padding-left: 0;
-    padding-top: 20px;
-    padding-right: 0;
+.footer-top-links {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: baseline;
   }
 }
