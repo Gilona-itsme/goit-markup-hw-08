@@ -8,10 +8,10 @@
   @extend %list;
   text-transform: uppercase;
 
-  .flex {
+  & > .flex {
     position: relative;
 
-    & + & {
+    &:not(:last-child) {
       margin-left: 30px;
     }
   }

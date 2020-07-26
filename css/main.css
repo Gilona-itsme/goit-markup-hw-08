@@ -824,11 +824,11 @@ body.modal-open {
   text-transform: uppercase;
 }
 
-.work .flex {
+.work > .flex {
   position: relative;
 }
 
-.work .flex + .work .flex {
+.work > .flex:not(:last-child) {
   margin-left: 30px;
 }
 
