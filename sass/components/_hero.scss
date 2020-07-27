@@ -15,7 +15,7 @@
       $secondary-background,
       $secondary-background
     ),
-    url("/images/header/Header_img_mobile.jpg");
+    url("../images/header/Header_img_mobile.jpg");
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -24,7 +24,7 @@
         $secondary-background,
         $secondary-background
       ),
-      url("/images/header/Header_img@2x_mobile.jpg");
+      url("../images/header/Header_img@2x_mobile.jpg");
   }
 
   @media screen and (max-width: 467px) {
@@ -39,7 +39,7 @@
         $secondary-background,
         $secondary-background
       ),
-      url("/images/header/Header_img_tablet.jpg");
+      url("../images/header/Header_img_tablet.jpg");
 
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
@@ -48,7 +48,7 @@
           $secondary-background,
           $secondary-background
         ),
-        url("/images/header/Header_img@2x_tablet.jpg");
+        url("../images/header/Header_img@2x_tablet.jpg");
     }
   }
 
@@ -62,7 +62,7 @@
         $secondary-background,
         $secondary-background
       ),
-      url("/images/header/Header_img_desktop.jpg");
+      url("../images/header/Header_img_desktop.jpg");
 
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
@@ -71,7 +71,7 @@
           $secondary-background,
           $secondary-background
         ),
-        url("/images/header/Header_img@2x_desktop.jpg");
+        url("../images/header/Header_img@2x_desktop.jpg");
     }
   }
 }
