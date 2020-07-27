@@ -828,7 +828,7 @@ body.modal-open {
   position: relative;
 }
 
-.work > .flex:not(:last-child) {
+.work > .flex:not(:first-child) {
   margin-left: 30px;
 }
 
