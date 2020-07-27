@@ -15,6 +15,10 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 0;
+  }
 }
 
 .contact-address {
