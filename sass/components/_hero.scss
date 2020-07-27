@@ -3,33 +3,77 @@
   margin-right: auto;
   padding-top: 118px;
   padding-bottom: 118px;
+  width: 100%;
 
-  @media screen and (min-width: $tablet) {
+  background-color: $secondary-background;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+
+  background-image: linear-gradient(
+      $secondary-background,
+      $secondary-background
+    ),
+    url("/images/header/Header_img_mobile.jpg");
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        $secondary-background,
+        $secondary-background
+      ),
+      url("/images/header/Header_img@2x_mobile.jpg");
+  }
+
+  @media screen and (max-width: 467px) {
     max-width: 480px;
     max-height: 400px;
   }
 
   @media screen and (min-width: $tablet) {
     max-width: 768px;
+
+    background-image: linear-gradient(
+        $secondary-background,
+        $secondary-background
+      ),
+      url("/images/header/Header_img_tablet.jpg");
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          $secondary-background,
+          $secondary-background
+        ),
+        url("/images/header/Header_img@2x_tablet.jpg");
+    }
   }
 
   @media screen and (min-width: $desktop) {
-    max-width: 1600px;
+    max-width: 1200px;
     max-height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
-  }
 
-  background-image: linear-gradient(
-      $secondary-background,
-      $secondary-background
-    ),
-    url("../images/Header.jpg");
-  background-color: $secondary-background;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  text-align: center;
+    background-image: linear-gradient(
+        $secondary-background,
+        $secondary-background
+      ),
+      url("/images/header/Header_img_desktop.jpg");
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          $secondary-background,
+          $secondary-background
+        ),
+        url("/images/header/Header_img@2x_desktop.jpg");
+    }
+  }
 }
 
 .hero-title {
